@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "compile": "esbuild src/index.ts --platform=node --target=node18 --bundle --outfile=dist/outfile.cjs",
+    "compile": "esbuild src/index.ts --platform=node --external:terminal-kit --target=node18 --bundle --outfile=dist/outfile.cjs",
     "package": "pkg dist/outfile.cjs --targets host --output dist/start --debug",
     "build": "npm run compile && npm run package"
   },
@@ -16,6 +16,7 @@
     "zx": "^7.2.3"
   },
   "devDependencies": {
+    "@types/terminal-kit": "^2.5.2",
     "esbuild": "^0.19.4",
     "pkg": "^5.8.1"
   }
