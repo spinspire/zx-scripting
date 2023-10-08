@@ -1,0 +1,3 @@
+*
+# little trick to keep the directory in git (must go after *)
+!.gitignore

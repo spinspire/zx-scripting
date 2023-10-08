@@ -1,0 +1,22 @@
+{
+  "name": "terminal-mm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "esbuild src/index.ts --platform=node --target=node18 --bundle --outfile=dist/outfile.cjs",
+    "package": "pkg dist/outfile.cjs --targets host --output dist/start --debug",
+    "build": "npm run compile && npm run package"
+  },
+  "author": "William Relken",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "terminal-kit": "^3.0.0",
+    "zx": "^7.2.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.4",
+    "pkg": "^5.8.1"
+  }
+}
